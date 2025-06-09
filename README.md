@@ -50,4 +50,46 @@ v
 +--------------------------+
 | SDRAM |
 +--------------------------+
+├── rtl/ # Synthesizable Verilog modules
+│ ├── sdram_controller.v
+│ └── fsm.v
+├── tb/ # Testbenches
+│ └── tb_sdram.v
+├── sim/ # Simulation scripts & waveforms
+├── docs/ # Block diagrams, timing charts
+├── fpga/ # Vivado project files
+└── README.md
+
+
+---
+
+##  Verification
+
+-  **Testbenches** simulate key timing scenarios (ACT → READ → PRE → REF)
+-  **Simulation Logs** capture command FSM transitions and bus activity
+-  **Waveform Dumps** verify SDRAM timing parameters met
+-  **FPGA Validation** using LEDs + UART debug output
+
+---
+
+## 📊 Results
+
+| Metric                     | Result                     |
+|----------------------------|----------------------------|
+| Compatible MCUs            | Any async-only memory bus  |
+| Latency Improvement        | ~30% faster than prior setup |
+| Clock Frequency (tested)   | 50 MHz SDRAM clock         |
+| SDRAM Chip Used            | MT48LC16M16 (16MB, 16-bit) |
+
+---
+
+## How to Use
+
+### 🔧 Simulate in ModelSim
+
+```bash
+cd sim/
+vsim -do run_tb_sdram.do
+
+
 
