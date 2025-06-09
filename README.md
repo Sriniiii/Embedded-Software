@@ -72,7 +72,7 @@ v
 
 ---
 
-## 📊 Results
+##  Results
 
 | Metric                     | Result                     |
 |----------------------------|----------------------------|
@@ -85,7 +85,7 @@ v
 
 ## How to Use
 
-### 🔧 Simulate in ModelSim
+### Simulate in ModelSim
 
 ```bash
 cd sim/
